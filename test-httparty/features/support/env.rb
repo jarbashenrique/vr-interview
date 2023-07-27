@@ -1,7 +1,6 @@
 # Importa as bibliotecas necessárias para o projeto.
 require 'cucumber' 
 require 'httparty' 
-require 'report_builder' 
 require 'rspec' 
 require 'json_matchers/rspec' 
 require 'cucumber/formatter/html'
