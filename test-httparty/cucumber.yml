@@ -1,0 +1,22 @@
+# Configuração padrão para todos os ambientes de execução de testes
+default: --format pretty -f json --out=report/report.json -f html --out=report/report.html
+
+# Configuração específica para o ambiente
+dev: -p bdd -p dot -p env_dev -p json -p html
+qa:  -p bdd -p dot -p env_qa -p json -p html
+
+# Configuração de formatos de saída para os diferentes tipos de relatórios
+bdd: -f pretty  
+dot: -f progress  
+html: -f html --out=report/report.html  
+json: -f json --out=report/report.json  
+
+# Configuração do resultado padrão
+result_default: --out tmp/results.txt
+
+# 'not_cucumber' é um marcador para não publicar os relatórios da ferramenta de execução Cucumber
+not_cucumber: --publish-quiet
+
+# Configuração de ambientes para definir a variável de ambiente ENV_TYPE
+dev: ENV=dev
+qa: ENV=qa

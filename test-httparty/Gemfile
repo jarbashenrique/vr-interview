@@ -1,0 +1,8 @@
+source 'https://rubygems.org'
+
+gem 'cucumber'
+gem 'httparty'
+gem 'json_matchers'
+gem 'report_builder'
+gem 'rspec'
+gem 'cucumber-html-formatter'

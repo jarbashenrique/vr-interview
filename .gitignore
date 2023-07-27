@@ -1,0 +1,10 @@
+test-cypress/node_modules
+test-cypress/cypress/reports/*.json
+test-cypress/cypress/reports/*.html
+test-cypress/cypress/reports/*.css
+test-cypress/cypress/videos/*.mp4
+test-cypress/package-lock.json
+
+test-httparty/report/*.html
+test-httparty/report/*.json
+test-httparty/Gemfile.lock

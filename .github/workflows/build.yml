@@ -1,0 +1,55 @@
+name: Testes Automatizados Vr
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  cypress:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout the code
+        uses: actions/checkout@v2
+
+      - name: Install and run Cypress tests
+        working-directory: test-cypress
+        run: |
+          npm install
+          npx cypress install
+          npx cypress run reports
+
+      - name: Upload reports
+        uses: actions/upload-artifact@v2
+        with:
+          name: cypress-reports
+          path: test-cypress/reports
+
+
+  httparty:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout the code
+        uses: actions/checkout@v2
+
+      - name: Set up Ruby
+        uses: actions/setup-ruby@v1
+        with:
+          ruby-version: 3.2.2
+
+      - name: Install bundler
+        run: gem install bundler
+
+      - name: Install dependencies and run Cucumber tests
+        working-directory: test-httparty
+        run: |
+          bundle install
+          cucumber
+
+      - name: Upload reports
+        uses: actions/upload-artifact@v2
+        with:
+          name: httparty-reports
+          path: test-httparty/report
