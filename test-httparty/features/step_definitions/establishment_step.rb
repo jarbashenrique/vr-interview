@@ -15,8 +15,7 @@ Entao('devera retornar a chave {string}') do |key_name|
 
   # Exibe o tipo de estabelecimento encontrado e printa no relatorio
   content = "Type of Establishment: #{establishment}"
-    puts(content)
-    attach(content, "text/plain")
+  @service.call(Establishment).publishEstablishment(content)
 
   # Verifica se a resposta da API corresponde ao esquema JSON 'list_Products_Establishment'
   expect(@response.body).to match_json_schema('list_Products_Establishment')

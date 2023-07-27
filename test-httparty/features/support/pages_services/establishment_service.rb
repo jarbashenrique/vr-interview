@@ -16,6 +16,11 @@ class Establishment
     result
   end
 
+  # Método para publicar um estabelecimento com um nome específico.
+  def publishEstablishment(name)
+    puts(name)
+  end
+
   # Método para obter uma categoria de estabelecimento aleatória com base na chave fornecida.
   def catEstablishment(response, chave)
     data = JSON.parse(response.body)

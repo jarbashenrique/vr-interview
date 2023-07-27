@@ -1,6 +1,4 @@
 # Importa as bibliotecas necessárias para o projeto.
-# require 'capybara/cucumber'
-require 'capybara/dsl'
 require 'cucumber' 
 require 'cucumber/formatter/html'
 require 'httparty' 
