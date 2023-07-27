@@ -1,9 +1,10 @@
 # Importa as bibliotecas necessárias para o projeto.
+require 'capybara/dsl'
 require 'cucumber' 
+require 'cucumber/formatter/html'
 require 'httparty' 
 require 'rspec' 
 require 'json_matchers/rspec' 
-require 'cucumber/formatter/html'
 
 
 # Verifica se a variável de ambiente ENV_TYPE está definida e atribui o valor "dev" caso não seja fornecido nenhum valor.
