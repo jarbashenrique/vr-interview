@@ -1,5 +1,5 @@
 # Configuração padrão para todos os ambientes de execução de testes
-default: --format pretty -f json --out=report/report.json -f html --out=report/report.html --publish-quiet
+default: --format pretty -f json --out=report/report.json -f html --out=report/report.html
 
 # Configuração específica para o ambiente
 dev: -p bdd -p dot -p env_dev -p json -p html
