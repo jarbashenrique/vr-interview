@@ -24,7 +24,7 @@ jobs:
         uses: actions/upload-artifact@v2
         with:
           name: cypress-reports
-          path: test-cypress/reports/assets
+          path: test-cypress/cypress/reports
 
 
   httparty:
